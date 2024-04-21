@@ -1,0 +1,33 @@
+<div class="container">
+  <button (click)="getCars()">All Cars</button>
+  <table class="table table-bordered">
+    <thead class="thead-light col-sm-1">
+      <tr>
+        <th>S.L</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ car.Name }}</td>
+        <td>{{ car.Brand }}</td>
+        <td>{{ car.Quantity }}</td>
+        <td class="action-buttons">
+          <button class="btn btn-primary btn-sm" routerLink="/create">
+            Create
+          </button>
+          <button class="btn btn-primary btn-sm"  (click)="updateData(car)">
+            Update
+          </button>
+          <button class="btn btn-primary btn-sm" (click)="deleteBtn(car)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

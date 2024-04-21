@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="card">
+      <h1>Form</h1>
+      <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="Name" name="Name" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand:</label>
+          <input type="text" id="Brand" name="Brand" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="Quantity" name="Quantity" ngModel required>
+        </div>
+        <button  type="submit">Submit</button>
+
+        <div *ngIf="carCreated">
+          <p>Car has been created successfully!</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  

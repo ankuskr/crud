@@ -1,0 +1,12 @@
+.action-buttons button {
+    margin-right: 5px; /* Add space between buttons */
+  }
+  
+  .table th, .table td {
+    padding: 0.5rem; /* Adjust padding for table cells */
+  }
+  
+  .action-buttons button:first-child {
+    margin-right: 10px; /* Extra space before the first button */
+  }
+  
